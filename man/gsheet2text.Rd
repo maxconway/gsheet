@@ -16,6 +16,6 @@ Downloads a Google sheet as text, using just the url.
 The Google sheet must have 'share by link' turned on.
 }
 \seealso{
-Other gsheet.functions: \code{\link{gsheet2tbl}}
+\code{\link{gsheet2text}} to download as a table
 }
 

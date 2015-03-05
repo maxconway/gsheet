@@ -6,7 +6,7 @@
 #' 
 #' @param url the google sheet url
 #' 
-#' @family gsheet functions
+#' @seealso \code{\link{gsheet2text}} to download as plain text
 #' @export
 gsheet2tbl <- function(url){
   dplyr::tbl_df(read.csv(text=gsheet::gsheet2text(url, format='csv'), stringsAsFactors=FALSE))

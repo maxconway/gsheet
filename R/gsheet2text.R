@@ -6,7 +6,7 @@
 #' @param url the google sheet url
 #' @param format controls the column separator used. \code{csv} or \code{tsv}
 #' 
-#' @family gsheet functions
+#' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export
 gsheet2text <- function(url, format='csv'){
   key <- str_extract(url, '[[:alnum:]_-]{30,}')

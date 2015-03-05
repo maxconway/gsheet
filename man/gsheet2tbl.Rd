@@ -15,6 +15,6 @@ If this function produces unexpected results, use a construction like \code{read
 The Google sheet must have 'share by link' turned on.
 }
 \seealso{
-Other gsheet.functions: \code{\link{gsheet2text}}
+\code{\link{gsheet2text}} to download as plain text
 }
 
