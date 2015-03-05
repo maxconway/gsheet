@@ -8,5 +8,5 @@
 #' 
 #' @family gsheet functions
 sheet2tbl <- function(url){
-  dplyr::tbl_df(read.csv(text=google_sheet2text(url, format='csv'), stringsAsFactors=FALSE))
+  dplyr::tbl_df(read.csv(text=gsheet::sheet2text(url, format='csv'), stringsAsFactors=FALSE))
 }
