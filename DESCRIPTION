@@ -1,9 +1,11 @@
 Package: gsheet
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: download google sheets using just the url
+Version: 0.1
 Date: 2015-03-05
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
+                  role = c("aut", "cre", ))
+Description: Simple package to download google sheets using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually.
+License: MIT
+URL: https://github.com/maxconway/gsheet
+BugReports: https://github.com/maxconway/gsheet/issues
