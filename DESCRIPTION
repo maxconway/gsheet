@@ -12,3 +12,4 @@ BugReports: https://github.com/maxconway/gsheet/issues
 Imports: dplyr,
     rvest,
     stringr
+Suggests: testthat
