@@ -7,6 +7,7 @@
 #' @param format controls the column separator used. \code{csv} or \code{tsv}
 #' 
 #' @family gsheet functions
+#' @export
 sheet2text <- function(url, format='csv'){
   key <- str_extract(url, '[[:alnum:]_-]{30,}')
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
