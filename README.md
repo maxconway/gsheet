@@ -10,6 +10,9 @@ gsheet is a simple package to download google sheets using just the sharing link
 Install the latest development version from github wth:
 
 ```r
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
 devtools::install_github("maxconway/gsheet")
 ```
 
