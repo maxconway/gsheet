@@ -8,6 +8,12 @@
 #' 
 #' @seealso \code{\link{gsheet2text}} to download as plain text
 #' @export
+#' 
+#' @examples
+#' \dontrun{
+#' url <- ''docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo''
+#' a <- gsheet2tbl(url)
+#' }
 gsheet2tbl <- function(url){
   dplyr::tbl_df(read.csv(text=gsheet::gsheet2text(url, format='csv'), stringsAsFactors=FALSE))
 }

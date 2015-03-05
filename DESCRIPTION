@@ -6,7 +6,7 @@ Date: 2015-03-05
 Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre"))
 Description: Simple package to download google sheets using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually.
-License: MIT
+License: GPL-3
 URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
 Imports: dplyr,

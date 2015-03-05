@@ -8,8 +8,14 @@
 #' 
 #' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export
+#' 
+#' @examples
+#' \dontrun{
+#' url <- ''docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo''
+#' a <- gsheet2text(url)
+#' }
 gsheet2text <- function(url, format='csv'){
-  key <- str_extract(url, '[[:alnum:]_-]{30,}')
+  key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
   page <- rvest::html(address)
   content <- rvest::html_text(rvest::html_node(page, 'p'))

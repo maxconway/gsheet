@@ -14,6 +14,12 @@ gsheet2tbl(url)
 If this function produces unexpected results, use a construction like \code{read.csv(text=google_sheet2text(url, format='csv'), stringsAsFactors=FALSE)} to parse manually, with your own options.
 The Google sheet must have 'share by link' turned on.
 }
+\examples{
+\dontrun{
+url <- ''docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo''
+a <- gsheet2tbl(url)
+}
+}
 \seealso{
 \code{\link{gsheet2text}} to download as plain text
 }
