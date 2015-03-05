@@ -11,8 +11,9 @@
 #' 
 #' @examples
 #' \dontrun{
-#' url <- ''docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo''
+#' url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 #' a <- gsheet2text(url)
+#' b <- read.csv(a)
 #' }
 gsheet2text <- function(url, format='csv'){
   key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
