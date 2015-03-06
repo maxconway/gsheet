@@ -4,16 +4,22 @@
 \alias{gsheet2text}
 \title{Download Google sheet as text.}
 \usage{
-gsheet2text(url, format = "csv")
+gsheet2text(url, format = "csv", sheetid = NULL)
 }
 \arguments{
 \item{url}{the google sheet url}
 
 \item{format}{controls the column separator used. \code{csv} or \code{tsv}}
+
+\item{sheetid}{the (zero based) id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)}
 }
 \description{
 Downloads a Google sheet as text, using just the url.
 The Google sheet must have 'share by link' turned on.
+}
+\details{
+\code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet.
+However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
 }
 \examples{
 \dontrun{

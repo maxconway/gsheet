@@ -24,6 +24,7 @@ library(gsheet)
 gsheet2tbl('docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo')
 ```
 
+## Advanced
 If you want more control, you might want to use something like:
 
 ```r
