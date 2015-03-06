@@ -1,7 +1,7 @@
 Package: gsheet
 Type: Package
 Title: Download Google Sheets Using Just the URL
-Version: 0.1
+Version: 0.1.0
 Date: 2015-03-05
 Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre"))
