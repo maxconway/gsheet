@@ -3,8 +3,12 @@
 #' Downloads a Google sheet as text, using just the url.
 #' The Google sheet must have 'share by link' turned on.
 #' 
+#' \code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet. 
+#' However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
+#' 
 #' @param url the google sheet url
 #' @param format controls the column separator used. \code{csv} or \code{tsv}
+#' @param sheetid the (zero based) id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)
 #' 
 #' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export

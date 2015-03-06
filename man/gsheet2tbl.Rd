@@ -4,20 +4,31 @@
 \alias{gsheet2tbl}
 \title{Download Google sheet as a table}
 \usage{
-gsheet2tbl(url)
+gsheet2tbl(url, sheetid = NULL)
 }
 \arguments{
 \item{url}{the google sheet url}
+
+\item{sheetid}{the (zero based) id of the sheet to download from. (Default \code{NULL}, downloads the first sheet)}
 }
 \description{
 \code{sheet2tbl} wraps \code{sheet2text} to parse sheets to tables.
+}
+\details{
+\code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet.
+However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
+
 If this function produces unexpected results, use a construction like \code{read.csv(text=google_sheet2text(url, format='csv'), stringsAsFactors=FALSE)} to parse manually, with your own options.
 The Google sheet must have 'share by link' turned on.
 }
 \examples{
 \dontrun{
+# Download a sheet
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 a <- gsheet2tbl(url)
+
+# Download the same sheet by id
+b <- gsheet2tbl(url, sheetid = 0)
 }
 }
 \seealso{
