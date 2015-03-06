@@ -15,9 +15,12 @@
 #' a <- gsheet2text(url)
 #' b <- read.csv(a)
 #' }
-gsheet2text <- function(url, format='csv'){
+gsheet2text <- function(url, format='csv', sheetid = NULL){
   key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
+  if(!is.null(sheetid)){
+    address <- paste0(address, '&gid=', sheetid)
+  }
   page <- rvest::html(address)
   content <- rvest::html_text(rvest::html_node(page, 'p'))
   return(content)
