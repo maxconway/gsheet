@@ -4,7 +4,7 @@
 
 # gsheet
 
-gsheet is a simple package to download google sheets using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually.
+gsheet is a simple package to download Google Sheets (aka Google Docs Spreadsheets) using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually. 
 
 ## Installation
 Install the latest development version from github wth:
@@ -32,6 +32,6 @@ url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTX
 a <- gsheet2text(url, format='csv')
 b <- read.csv(a, stringsAsFactors=FALSE)
 ```
-This way the table can be cleaned before parsing, and different options can be used in parsing
+This way the table can be cleaned before parsing, and different options can be used in parsing.
 
 

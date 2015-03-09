@@ -7,8 +7,13 @@
 There were no ERRORs or WARNINGs.
 
 NOTEs:
-- Possible misspelling of the word 'Google' in the title. Obviously 'Google' is in fact the correct spelling.
 - This is a new submission.
 
 ## Downstream dependencies
 None, since this is a first release.
+
+## Resubmission
+This is a resubmission. In this version I have:
+
+- Corrected capitalization of 'Google' in DESCRIPTION.
+- Explained that Google Sheets is the new name for Google Docs.
