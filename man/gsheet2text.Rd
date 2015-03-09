@@ -22,11 +22,9 @@ The Google sheet must have 'share by link' turned on.
 However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
 }
 \examples{
-\dontrun{
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 a <- gsheet2text(url)
-b <- read.csv(a)
-}
+b <- read.csv(text=a)
 }
 \seealso{
 \code{\link{gsheet2text}} to download as a table

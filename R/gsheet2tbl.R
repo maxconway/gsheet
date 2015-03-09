@@ -15,14 +15,14 @@
 #' @export
 #' 
 #' @examples
-#' \dontrun{
+#' 
 #' # Download a sheet
 #' url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 #' a <- gsheet2tbl(url)
 #' 
 #' # Download the same sheet by id
 #' b <- gsheet2tbl(url, sheetid = 0)
-#' }
+#' 
 gsheet2tbl <- function(url, sheetid=NULL){
   dplyr::tbl_df(read.csv(text=gsheet::gsheet2text(url, format='csv', sheetid=sheetid), stringsAsFactors=FALSE))
 }

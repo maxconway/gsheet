@@ -22,14 +22,12 @@ If this function produces unexpected results, use a construction like \code{read
 The Google sheet must have 'share by link' turned on.
 }
 \examples{
-\dontrun{
 # Download a sheet
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 a <- gsheet2tbl(url)
 
 # Download the same sheet by id
 b <- gsheet2tbl(url, sheetid = 0)
-}
 }
 \seealso{
 \code{\link{gsheet2text}} to download as plain text

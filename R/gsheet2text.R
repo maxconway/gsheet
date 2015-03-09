@@ -14,11 +14,11 @@
 #' @export
 #' 
 #' @examples
-#' \dontrun{
+#' 
 #' url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 #' a <- gsheet2text(url)
-#' b <- read.csv(a)
-#' }
+#' b <- read.csv(text=a)
+#' 
 gsheet2text <- function(url, format='csv', sheetid = NULL){
   key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
