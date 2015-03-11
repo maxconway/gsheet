@@ -7,12 +7,15 @@
 gsheet is a simple package to download Google Sheets (aka Google Docs Spreadsheets) using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually. 
 
 ## Installation
-Install the latest development version from github wth:
+Install from CRAN with:
 
 ```r
-if (packageVersion("devtools") < 1.6) {
-  install.packages("devtools")
-}
+install.packages('gsheet')
+```
+
+Or install the latest development version from github wth:
+
+```r
 devtools::install_github("maxconway/gsheet")
 ```
 

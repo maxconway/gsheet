@@ -17,3 +17,5 @@ This is a resubmission. In this version I have:
 
 - Corrected capitalization of 'Google' in DESCRIPTION.
 - Explained that Google Sheets is the new name for Google Docs.
+- Fixed a bug due to a missing `text=` in `read.csv`, in one of the examples.
+- Removed `dontrun` tags in examples.
