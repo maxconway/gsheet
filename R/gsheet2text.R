@@ -26,6 +26,9 @@ gsheet2text <- function(url, format='csv', sheetid = NULL){
     address <- paste0(address, '&gid=', sheetid)
   }
   page <- rvest::html(address)
+  if(page %>% html_nodes('script') %>% length() > 0 | page %>% html_nodes('style') %>% length() > 0){
+    stop("Unable to retrieve document. Is 'share by link' enabled for this sheet?")
+  }
   content <- rvest::html_text(rvest::html_node(page, 'p'))
   return(content)
 }
