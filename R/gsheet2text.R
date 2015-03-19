@@ -13,6 +13,8 @@
 #' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export
 #' 
+#' @import rvest
+#' 
 #' @examples
 #' 
 #' url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
