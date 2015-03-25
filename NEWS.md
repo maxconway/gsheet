@@ -1,4 +1,8 @@
-# gsheet 0.1.0.9000
+# gsheet 0.1.1.9000
+
+## Major
+
+- Fixed sheet ids
 
 ## Minor
 
