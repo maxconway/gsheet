@@ -4,19 +4,17 @@
 \alias{gsheet2tbl}
 \title{Download Google sheet as a table}
 \usage{
-gsheet2tbl(url, sheetid = NULL)
+gsheet2tbl(url)
 }
 \arguments{
 \item{url}{the google sheet url}
-
-\item{sheetid}{the (zero based) id of the sheet to download from. (Default \code{NULL}, downloads the first sheet)}
 }
 \description{
 \code{sheet2tbl} wraps \code{sheet2text} to parse sheets to tables.
 }
 \details{
-\code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet.
-However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
+\code{sheetid} is the index of the sheet to be downloaded. If you use the direct sheet URL, rather than the share by link, this will automatically be extracted.
+Otherwise, the first sheet will be downloaded by default.
 
 If this function produces unexpected results, use a construction like \code{read.csv(text=google_sheet2text(url, format='csv'), stringsAsFactors=FALSE)} to parse manually, with your own options.
 The Google sheet must have 'share by link' turned on.
@@ -26,8 +24,9 @@ The Google sheet must have 'share by link' turned on.
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 a <- gsheet2tbl(url)
 
-# Download the same sheet by id
-b <- gsheet2tbl(url, sheetid = 0)
+# Download the second sheet, using the direct url
+url <- 'docs.google.com/spreadsheets/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
+b <- gsheet2tbl(url)
 }
 \seealso{
 \code{\link{gsheet2text}} to download as plain text

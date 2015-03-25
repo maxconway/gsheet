@@ -3,12 +3,13 @@
 #' Downloads a Google sheet as text, using just the url.
 #' The Google sheet must have 'share by link' turned on.
 #' 
-#' \code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet. 
-#' However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
+#' \code{sheetid} is the index of the sheet to be downloaded. 
+#' If you use the direct sheet URL, rather than the share by link, this will automatically be extracted. 
+#' Otherwise, the first sheet will be downloaded by default.
 #' 
 #' @param url the google sheet url
 #' @param format controls the column separator used. \code{csv} or \code{tsv}
-#' @param sheetid the (zero based) id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)
+#' @param sheetid the id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)
 #' 
 #' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export
@@ -23,6 +24,9 @@
 #' 
 gsheet2text <- function(url, format='csv', sheetid = NULL){
   key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
+  if(is.null(sheetid) & stringr::str_detect(url, 'gid=[[:digit:]]+')){
+    sheetid <- as.numeric(stringr::str_extract(stringr::str_extract(url, 'gid=[[:digit:]]+'),'[[:digit:]]+'))
+  }
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
   if(!is.null(sheetid)){
     address <- paste0(address, '&gid=', sheetid)

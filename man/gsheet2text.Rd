@@ -11,15 +11,16 @@ gsheet2text(url, format = "csv", sheetid = NULL)
 
 \item{format}{controls the column separator used. \code{csv} or \code{tsv}}
 
-\item{sheetid}{the (zero based) id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)}
+\item{sheetid}{the id of the sheet to download from.  (Default \code{NULL}, downloads the first sheet)}
 }
 \description{
 Downloads a Google sheet as text, using just the url.
 The Google sheet must have 'share by link' turned on.
 }
 \details{
-\code{sheetid} is zero based, so normally \code{sheetid=0} will download the first sheet.
-However, deleted sheets do not relinquish their \code{sheetid}, so if you create two sheets, then delete the first one, there will be no sheet 0, and the new first sheet will be sheet 1.
+\code{sheetid} is the index of the sheet to be downloaded.
+If you use the direct sheet URL, rather than the share by link, this will automatically be extracted.
+Otherwise, the first sheet will be downloaded by default.
 }
 \examples{
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
