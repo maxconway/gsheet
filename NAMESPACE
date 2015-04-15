@@ -3,3 +3,4 @@
 export(gsheet2tbl)
 export(gsheet2text)
 import(rvest)
+import(stringr)

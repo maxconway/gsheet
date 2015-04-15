@@ -15,6 +15,7 @@
 #' @export
 #' 
 #' @import rvest
+#' @import stringr
 #' 
 #' @examples
 #' 
@@ -23,18 +24,18 @@
 #' b <- read.csv(text=a)
 #' 
 gsheet2text <- function(url, format='csv', sheetid = NULL){
-  key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
-  if(is.null(sheetid) & stringr::str_detect(url, 'gid=[[:digit:]]+')){
-    sheetid <- as.numeric(stringr::str_extract(stringr::str_extract(url, 'gid=[[:digit:]]+'),'[[:digit:]]+'))
+  key <- str_extract(url, '[[:alnum:]_-]{30,}')
+  if(is.null(sheetid) & str_detect(url, 'gid=[[:digit:]]+')){
+    sheetid <- url %>% str_extract('gid=[[:digit:]]+') %>% str_extract('[[:digit:]]+') %>% as.numeric()
   }
   address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
   if(!is.null(sheetid)){
     address <- paste0(address, '&gid=', sheetid)
   }
-  page <- rvest::html(address)
+  page <- html(address)
   if(page %>% html_nodes('script') %>% length() > 0 | page %>% html_nodes('style') %>% length() > 0){
     stop("Unable to retrieve document. Is 'share by link' enabled for this sheet?")
   }
-  content <- rvest::html_text(rvest::html_node(page, 'p'))
+  content <- html_text(html_node(page, 'p'))
   return(content)
 }
