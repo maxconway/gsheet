@@ -25,7 +25,7 @@ url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTX
 a <- gsheet2tbl(url)
 
 # Download the second sheet, using the direct url
-url <- 'docs.google.com/spreadsheets/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
+url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
 b <- gsheet2tbl(url)
 }
 \seealso{

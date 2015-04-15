@@ -20,11 +20,11 @@
 #' a <- gsheet2tbl(url)
 #' 
 #' # Download the second sheet, using the direct url
-#' url <- 'docs.google.com/spreadsheets/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
+#' url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
 #' b <- gsheet2tbl(url)
 #' 
 gsheet2tbl <- function(url){
-  table <- read.csv(text=gsheet::gsheet2text(url, format='csv'), stringsAsFactors=FALSE)
+  table <- read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)
   class(table) <- c("tbl_df", "tbl", "data.frame")
   return(table)
 }
