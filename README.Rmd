@@ -31,6 +31,7 @@ gsheet2tbl('docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYv
 ```
 
 ## Advanced
+### More control
 If you want more control, you might want to use something like:
 ```{r, eval=FALSE}
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
@@ -38,5 +39,15 @@ a <- gsheet2text(url, format='csv')
 b <- read.csv(a, stringsAsFactors=FALSE)
 ```
 This way the table can be cleaned before parsing, and different options can be used in parsing.
+
+### Downloading other sheets
+If you want to download a sheet other than the first, you have to use the direct url, copied from the address bar, like so:
+```{r, eval=FALSE}
+url <- 'docs.google.com/spreadsheets/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo#gid=850032961'
+b <- gsheet2tbl(url)
+```
+This works because this makes the gid, whcih si the sheet identifier, available.
+If you have problems downloading the first sheet, this can also help too.
+
 
 
