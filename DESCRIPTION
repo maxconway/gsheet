@@ -9,7 +9,6 @@ Description: Simple package to download Google Sheets using just the sharing lin
 License: GPL-3
 URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
-Imports: dplyr,
-    rvest,
+Imports: rvest,
     stringr
 Suggests: testthat
