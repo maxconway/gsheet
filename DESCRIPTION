@@ -1,8 +1,8 @@
 Package: gsheet
 Type: Package
 Title: Download Google Sheets Using Just the URL
-Version: 0.1.1.9000
-Date: 2015-03-09
+Version: 0.2
+Date: 2015-04-15
 Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre"))
 Description: Simple package to download Google Sheets using just the sharing link. Spreadsheets can be downloaded as a data frame, or as plain text to parse manually. Google Sheets is the new name for Google Docs Spreadsheets.

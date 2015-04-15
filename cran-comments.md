@@ -1,21 +1,10 @@
 ## Test environments
 
-- ubuntu 14.04
-- win-builder
+- ubuntu 14.04, R 3.1.2
+- win-builder (devel and release)
 
 ## R CMD check results
-There were no ERRORs or WARNINGs.
-
-NOTEs:
-- This is a new submission.
+There were no ERRORs, WARNINGs or NOTEs
 
 ## Downstream dependencies
-None, since this is a first release.
-
-## Resubmission
-This is a resubmission. In this version I have:
-
-- Corrected capitalization of 'Google' in DESCRIPTION.
-- Explained that Google Sheets is the new name for Google Docs.
-- Fixed a bug due to a missing `text=` in `read.csv`, in one of the examples.
-- Removed `dontrun` tags in examples.
+None
