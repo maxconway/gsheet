@@ -4,3 +4,10 @@ language: r
 
 env:
   - warnings_are_errors: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+sudo: required
