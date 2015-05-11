@@ -5,3 +5,4 @@
 ^NEWS\.md$
 ^revdep$
 ^cran-comments\.md$
+^\.travis\.yml$
