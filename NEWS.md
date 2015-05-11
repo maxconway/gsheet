@@ -11,6 +11,7 @@
 ## Bugfixes
 
 - Fixed namespace bugs (#1)
+- Fixed further namespace bugs resulting from new stringr version
 
 # gsheet 0.1
 
