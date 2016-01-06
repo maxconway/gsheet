@@ -1,3 +1,9 @@
+# gsheet 0.2.1
+
+## Bugfixes
+
+- Fixed issue due to deprecated function in rvest
+
 # gsheet 0.1.1.9000
 
 ## Major
