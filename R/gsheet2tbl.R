@@ -24,6 +24,7 @@
 #' b <- gsheet2tbl(url)
 #' 
 gsheet2tbl <- function(url){
-  table <- readr::read_csv(gsheet2text(url, format='csv'))
+  table <- utils::read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)
+  class(table) <- c("tbl_df", "tbl", "data.frame")
   return(table)
 }
