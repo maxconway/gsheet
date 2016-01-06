@@ -11,5 +11,6 @@ URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
 Imports: rvest,
     stringr,
-    magrittr
+    magrittr,
+    xml2
 Suggests: testthat
