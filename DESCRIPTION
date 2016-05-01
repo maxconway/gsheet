@@ -5,11 +5,17 @@ Version: 0.2.0
 Date: 2015-04-15
 Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre"))
-Description: Simple package to download Google Sheets using just the sharing link. Spreadsheets can be downloaded as a data frame, or as plain text to parse manually. Google Sheets is the new name for Google Docs Spreadsheets.
+Description: Simple package to download Google Sheets using just the sharing
+    link. Spreadsheets can be downloaded as a data frame, or as plain text to parse
+    manually. Google Sheets is the new name for Google Docs Spreadsheets.
 License: GPL-3
 URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
-Imports: rvest,
+Imports:
+    httr,
+    rvest,
     stringr,
     magrittr
-Suggests: testthat
+Suggests:
+    testthat
+RoxygenNote: 5.0.1.9000
