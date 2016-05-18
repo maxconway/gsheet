@@ -1,3 +1,13 @@
+# gsheet 0.3.0
+
+# Minor changes
+
+- Moved from rvest and xml2 to purely using httr.
+
+## Bugfixes
+
+- Changed URL format to match a change made by Google. Resolved #6 and #7
+
 # gsheet 0.2.1
 
 ## Bugfixes
