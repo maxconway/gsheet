@@ -31,11 +31,11 @@ gsheet2text <- function(url, format='csv', sheetid = NULL){
   if(!is.null(sheetid)){
     address <- paste0(address, '&gid=', sheetid)
   }
-  page <- xml2::read_html(address)
-  if(page %>% rvest::html_nodes('script') %>% length() > 0 | page %>% rvest::html_nodes('style') %>% length() > 0){
+  page <- httr::GET(address)
+  if(httr::http_type(page) == 'text/html'){
     stop("Unable to retrieve document. Is 'share by link' enabled for this sheet?")
   }
-  content <- httr::GET(address) %>% 
+  content <- page %>% 
     httr::content(as='text')
   return(content)
 }
