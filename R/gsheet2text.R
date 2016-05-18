@@ -27,7 +27,7 @@ gsheet2text <- function(url, format='csv', sheetid = NULL){
   if(is.null(sheetid) & stringr::str_detect(url, 'gid=[[:digit:]]+')){
     sheetid <- url %>% stringr::str_extract('gid=[[:digit:]]+') %>% stringr::str_extract('[[:digit:]]+') %>% as.numeric()
   }
-  address <- paste0('https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=',key,'&exportFormat=',format)
+  address <- paste0('https://docs.google.com/spreadsheets/export?id=',key,'&format=',format)
   if(!is.null(sheetid)){
     address <- paste0(address, '&gid=', sheetid)
   }
