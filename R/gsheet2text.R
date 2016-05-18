@@ -32,7 +32,7 @@ gsheet2text <- function(url, format='csv', sheetid = NULL){
     address <- paste0(address, '&gid=', sheetid)
   }
   page <- httr::GET(address)
-  if(httr::http_type(page) == 'text/html'){
+  if(stringr::str_detect(page$headers$`content-type`, stringr::fixed('text/html'))){
     stop("Unable to retrieve document. Is 'share by link' enabled for this sheet?")
   }
   content <- page %>% 
