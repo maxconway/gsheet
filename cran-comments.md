@@ -1,6 +1,6 @@
 ## Test environments
 
-- ubuntu 14.04, R 3.2.5
+- ubuntu 14.04, R 3.2.5 and 3.3.0
 - win-builder (devel and release)
 
 ## R CMD check results
