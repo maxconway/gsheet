@@ -1,6 +1,6 @@
 # gsheet 0.3.0
 
-# Minor changes
+## Minor changes
 
 - Moved from rvest and xml2 to purely using httr.
 
