@@ -1,5 +1,7 @@
-[![Travis-CI Build Status](https://travis-ci.org/maxconway/gsheet.png?branch=master)](https://travis-ci.org/maxconway/gsheet)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gsheet)](https://cran.r-project.org/package=gsheet)
+---
+output: github_document
+---
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, echo = FALSE}
@@ -11,6 +13,8 @@ knitr::opts_chunk$set(
 ```
 
 # gsheet
+[![Travis-CI Build Status](https://travis-ci.org/maxconway/gsheet.png?branch=master)](https://travis-ci.org/maxconway/gsheet)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gsheet)](https://cran.r-project.org/package=gsheet)
 
 gsheet is a simple package to download Google Sheets (aka Google Docs Spreadsheets) using just the sharing link. Sheets can be downloaded as a data frame, or as plain text to parse manually. 
 
