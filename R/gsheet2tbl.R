@@ -36,7 +36,7 @@
 #' read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)
 #' 
 #' # Or, with readr:
-#' if(requireNamespace('readr')){
+#' if(requireNamespace('readr', quietly=TRUE)){
 #'   library(readr)
 #'   read_csv(construct_download_url(url), col_types = cols(
 #'     mpg = col_double(),
@@ -54,7 +54,7 @@
 #' }
 #' 
 gsheet2tbl <- function(url, sheetid = NULL){
-  if(requireNamespace('readr')){
+  if(requireNamespace('readr', quietly=TRUE)){
     suppressMessages(table <- readr::read_csv(file = construct_download_url(url, format='csv', sheetid = NULL)))
   }else{
     table <- utils::read.csv(text=gsheet2text(url=url, format='csv', sheetid=sheetid), stringsAsFactors=FALSE)

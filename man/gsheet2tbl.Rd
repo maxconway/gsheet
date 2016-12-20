@@ -41,7 +41,7 @@ url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTX
 read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)
 
 # Or, with readr:
-if(requireNamespace('readr')){
+if(requireNamespace('readr', quietly=TRUE)){
   library(readr)
   read_csv(construct_download_url(url), col_types = cols(
     mpg = col_double(),

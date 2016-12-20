@@ -21,7 +21,7 @@ Converts the viewing url for a google sheet to a download url.
 # Download a sheet manually using readr
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 
-if(requireNamespace('readr')){
+if(requireNamespace('readr', quietly=TRUE)){
   library(readr)
   read_csv(construct_download_url(url), col_types = cols(
     mpg = col_double(),
