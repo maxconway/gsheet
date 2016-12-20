@@ -1,4 +1,7 @@
-# gsheet 0.3.0.9000
+# gsheet 0.4.0
+
+- gsheet2tbl now uses readr if it is available
+- new function construct_download_url allows manual downloading using readr
 
 # gsheet 0.3.0
 
