@@ -14,7 +14,6 @@
 #' @seealso \code{\link{gsheet2text}} to download as a table
 #' @export
 #' 
-#' @import magrittr
 #' 
 #' @examples
 #' 
@@ -23,19 +22,11 @@
 #' b <- read.csv(text=a)
 #' 
 gsheet2text <- function(url, format='csv', sheetid = NULL){
-  key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
-  if(is.null(sheetid) & stringr::str_detect(url, 'gid=[[:digit:]]+')){
-    sheetid <- url %>% stringr::str_extract('gid=[[:digit:]]+') %>% stringr::str_extract('[[:digit:]]+') %>% as.numeric()
-  }
-  address <- paste0('https://docs.google.com/spreadsheets/export?id=',key,'&format=',format)
-  if(!is.null(sheetid)){
-    address <- paste0(address, '&gid=', sheetid)
-  }
+  address <- construct_download_url(url=url, format=format, sheetid = sheetid)
   page <- httr::GET(address)
   if(stringr::str_detect(page$headers$`content-type`, stringr::fixed('text/html'))){
     stop("Unable to retrieve document. Is 'share by link' enabled for this sheet?")
   }
-  content <- page %>% 
-    httr::content(as='text')
+  content <- httr::content(page, as='text')
   return(content)
 }

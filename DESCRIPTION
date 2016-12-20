@@ -13,8 +13,8 @@ URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
 Imports:
     httr,
-    stringr,
-    magrittr
+    stringr
 Suggests:
-    testthat
+    testthat,
+    readr
 RoxygenNote: 5.0.1.9000
