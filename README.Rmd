@@ -1,4 +1,5 @@
 [![Travis-CI Build Status](https://travis-ci.org/maxconway/gsheet.png?branch=master)](https://travis-ci.org/maxconway/gsheet)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gsheet)](https://cran.r-project.org/package=gsheet)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, echo = FALSE}
