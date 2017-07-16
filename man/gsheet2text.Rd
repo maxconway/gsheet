@@ -32,4 +32,3 @@ b <- read.csv(text=a)
 \seealso{
 \code{\link{gsheet2text}} to download as a table
 }
-

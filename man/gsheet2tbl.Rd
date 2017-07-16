@@ -62,4 +62,3 @@ if(requireNamespace('readr', quietly=TRUE)){
 \seealso{
 \code{\link{gsheet2text}} to download as plain text
 }
-

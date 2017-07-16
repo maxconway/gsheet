@@ -1,3 +1,7 @@
+# gsheet 0.4.3
+
+- Added a link to google sheets to description
+
 # gsheet 0.4.2
 
 - fixes to make tests agnostic to use of readr vs base
