@@ -13,3 +13,6 @@ matrix:
     - r: devel
     - r: release
     - r: oldrel
+  allow_failures:
+    - r: devel
+    - r: oldrel
