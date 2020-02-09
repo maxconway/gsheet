@@ -42,7 +42,7 @@ If you want more control, you might want to use something like:
 ``` r
 url <- 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'
 a <- gsheet2text(url, format='csv')
-b <- read.csv(a, stringsAsFactors=FALSE)
+b <- read.csv(text=a, stringsAsFactors=FALSE)
 ```
 
 This way the table can be cleaned before parsing, and different options can be used in parsing.
