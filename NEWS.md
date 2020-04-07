@@ -1,3 +1,7 @@
+# gsheet 0.4.5
+
+- Pull request from adaRn to enable more customisation of parsing
+
 # gsheet 0.4.3
 
 - Added a link to google sheets to description
