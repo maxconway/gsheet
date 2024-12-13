@@ -1,4 +1,5 @@
 - Fixed typos documentation
+- Moved from travis to github CI
 
 # gsheet 0.4.5
 
