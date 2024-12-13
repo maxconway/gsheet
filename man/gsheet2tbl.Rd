@@ -17,7 +17,6 @@ This is a convenience function, designed to download a table quickly and conveni
 If you experience any unexpected results, or you want more reliability or control (e.g. for a production situation), then I'd recommend you parse manually using one of the constructions in the examples:
 \itemize{
   \item{\code{read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)}}
-  \item{\code{}}
 }
 }
 \details{

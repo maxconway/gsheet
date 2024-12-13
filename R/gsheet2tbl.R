@@ -4,7 +4,6 @@
 #' If you experience any unexpected results, or you want more reliability or control (e.g. for a production situation), then I'd recommend you parse manually using one of the constructions in the examples:
 #' \itemize{
 #'   \item{\code{read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALSE)}}
-#'   \item{\code{}}
 #' }
 #' 
 #' @details 
@@ -12,7 +11,6 @@
 #' 
 #' If the package \code{readr} is available, then it will be used. 
 #' This can produce slightly different, but normally better, parsings.
-#' 
 #' 
 #' @param url the google sheet url
 #' @param sheetid the index of the sheet to be downloaded. If you use the direct sheet URL, rather than the share by link, this will automatically be extracted. 

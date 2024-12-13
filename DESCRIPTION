@@ -9,6 +9,7 @@ Description: Simple package to download Google Sheets using just the sharing
     link. Spreadsheets can be downloaded as a data frame, or as plain text to parse
     manually. Google Sheets is the new name for Google Docs Spreadsheets <https://www.google.com/sheets/about>.
 License: GPL-3
+Encoding: UTF-8
 URL: https://github.com/maxconway/gsheet
 BugReports: https://github.com/maxconway/gsheet/issues
 Language: en-GB
@@ -18,4 +19,4 @@ Imports:
 Suggests:
     testthat,
     readr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.3.2
