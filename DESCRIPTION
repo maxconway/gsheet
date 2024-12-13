@@ -1,8 +1,8 @@
 Package: gsheet
 Type: Package
 Title: Download Google Sheets Using Just the URL
-Version: 0.4.5
-Date: 2020-04-07
+Version: 0.4.6
+Date: 2024-12-13
 Authors@R: person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre"))
 Description: Simple package to download Google Sheets using just the sharing
